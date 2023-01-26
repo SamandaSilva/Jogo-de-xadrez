@@ -29,9 +29,18 @@ public class Partida_de_xadrez {
 	}
 	
 	private void iniciarpartida() {
-		coordenadas('b', 6, new Torre(tabuleiro, Cor.branco));
-		coordenadas('e', 8, new Rei(tabuleiro, Cor.preto));
-		coordenadas('e', 1, new Rei(tabuleiro, Cor.preto));
+		coordenadas('c', 1, new Torre(tabuleiro, Cor.branco));
+		coordenadas('c', 2, new Torre(tabuleiro, Cor.branco));
+		coordenadas('d', 2, new Torre(tabuleiro, Cor.branco));
+        coordenadas('e', 2, new Torre(tabuleiro, Cor.branco));
+        coordenadas('e', 1, new Torre(tabuleiro, Cor.branco));
+        coordenadas('d', 1, new Rei(tabuleiro, Cor.branco));
 
+        coordenadas('c', 7, new Torre(tabuleiro, Cor.preto));
+        coordenadas('c', 8, new Torre(tabuleiro, Cor.preto));
+        coordenadas('d', 7, new Torre(tabuleiro, Cor.preto));
+        coordenadas('e', 7, new Torre(tabuleiro, Cor.preto));
+        coordenadas('e', 8, new Torre(tabuleiro, Cor.preto));
+        coordenadas('d', 8, new Rei(tabuleiro, Cor.preto));
 	}
 }
