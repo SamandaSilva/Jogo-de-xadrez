@@ -45,6 +45,9 @@ public class Partida_de_xadrez {
 		if(!tabuleiro.tem_a_peca(posicao)) {
 			throw new excecao_xadrez("nao existe peca nessa posicao");
 		}
+		if(!tabuleiro.peca(posicao).ha_possibilidade_de_movimento()) {
+			throw new excecao_xadrez("nao existem movimentos possiveis para a peca escolhida");
+		}
 	}
 	
 	private void coordenadas(char coluna, int linha, Peca_de_xadrez peca) {

@@ -3,7 +3,7 @@ package xadrez;
 import tabuleiro.Peca;
 import tabuleiro.Tabuleiro;
 
-public class Peca_de_xadrez extends Peca {
+public abstract class Peca_de_xadrez extends Peca {
 
 	private Cor cor;
 
