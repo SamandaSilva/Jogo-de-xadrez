@@ -15,16 +15,19 @@ public class Programa {
 		Partida_de_xadrez partida = new Partida_de_xadrez();
 
 		while (true) {
-			UI.printTabuleiro(partida.getpecas());
-			System.out.println();
-			System.out.print("Origem: ");
-			Posicao_xadrez origem = UI.ler_posicao_do_xadrez(sc);
 			
-			System.out.println();
-			System.out.print("Destino: ");
-			Posicao_xadrez destino = UI.ler_posicao_do_xadrez(sc);
+				UI.limpar_tela();
+				UI.printTabuleiro(partida.getpecas());
+				System.out.println();
+				System.out.print("Origem: ");
+				Posicao_xadrez origem = UI.ler_posicao_do_xadrez(sc);
+				
+				System.out.println();
+				System.out.print("Destino: ");
+				Posicao_xadrez destino = UI.ler_posicao_do_xadrez(sc);
 
-            Peca_de_xadrez peca_capturada = partida.performa_partida(origem, destino);
+	            Peca_de_xadrez peca_capturada = partida.performa_partida(origem, destino);
+				
 			
 		}
 	}
