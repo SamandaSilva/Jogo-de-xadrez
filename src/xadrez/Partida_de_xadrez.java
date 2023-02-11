@@ -26,6 +26,12 @@ public class Partida_de_xadrez {
 		return mat;
 	}
 	
+	public boolean[][] movimentos_possiveis(Posicao_xadrez Posica_de_origem){
+		Posicao posicao = Posica_de_origem.Aposicao();
+		validar_posicao_da_peca(posicao);
+		return tabuleiro.peca(posicao).movimentos_possiveis();
+	}
+	
 	public Peca_de_xadrez performa_partida(Posicao_xadrez posicao_origem, Posicao_xadrez posicao_destino) {
 		Posicao origem = posicao_origem.Aposicao();
 		Posicao destino = posicao_destino.Aposicao();

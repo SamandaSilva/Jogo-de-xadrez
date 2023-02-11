@@ -3,6 +3,8 @@ package Aplicacao;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import javax.sound.midi.Patch;
+
 import xadrez.Partida_de_xadrez;
 import xadrez.Peca_de_xadrez;
 import xadrez.Posicao_xadrez;
@@ -25,6 +27,11 @@ public class Programa {
 				System.out.print("Origem: ");
 				Posicao_xadrez origem = UI.ler_posicao_do_xadrez(sc);
 
+				boolean[][] movimentos_possiveis = partida.movimentos_possiveis(origem);
+				UI.limpar_tela();
+				UI.printTabuleiro(partida.getpecas(), movimentos_possiveis);
+				
+				System.out.println();
 				System.out.println();
 				System.out.print("Destino: ");
 				Posicao_xadrez destino = UI.ler_posicao_do_xadrez(sc);
